@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     public bool grounded { get; private set; }
     public bool jumping { get; private set; }
+    public bool sliding => (inputAxis > 0f && velocity.x < 0f) || (inputAxis < 0f && velocity.x > 0f);
+    public bool running => Mathf.Abs(velocity.x) > 0.25f || Mathf.Abs(inputAxis) > 0.25f;
+
 
     private void Awake()
     {
@@ -43,6 +46,21 @@ public class PlayerMovement : MonoBehaviour
     {
         inputAxis = Input.GetAxis("Horizontal");
         velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * moveSpeed, moveSpeed * Time.deltaTime);
+
+        if (rb.Raycast(Vector2.right * velocity.x))
+        {
+            velocity.x = 0f;
+        }
+
+        if(velocity.x > 0f)
+        {
+            transform.eulerAngles = Vector3.zero;
+
+        }
+        else if(velocity.x < 0f)
+        {
+            transform.eulerAngles = new Vector3(0f, 200f, 0f);
+        }
 
     }
 
@@ -79,6 +97,17 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(position);
 
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
+        {
+            if(transform.DotTest(collision.transform, Vector2.up))
+            {
+                velocity.y = 0f;
+            }
+        }
+        
+    }
+    
 
 }
