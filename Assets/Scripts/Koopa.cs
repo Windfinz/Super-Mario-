@@ -38,6 +38,9 @@ public class Koopa : MonoBehaviour
                 Player player = other.gameObject.GetComponent<Player>();
                 player.Hit();
             }
+        } else if (!shelled && other.gameObject.layer == LayerMask.NameToLayer("Shell"))
+        {
+            Hit();
         }
     }
 
@@ -59,6 +62,23 @@ public class Koopa : MonoBehaviour
         movement.direction = direction.normalized;
         movement.speed = shellSpeed;
         movement.enabled = true;
+
+        gameObject.layer = LayerMask.NameToLayer("Shell");
+    }
+
+    private void Hit()
+    {
+        GetComponent<AnimationSprites>().enabled = false;
+        GetComponent<DeathAnim>().enabled = true;
+        Destroy(gameObject, 3f);
+    }
+
+    private void OnBecameInvisible()
+    {
+        if (pushed)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

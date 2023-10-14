@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
         bigRenderer.enabled = false;
         deathAnim.enabled = true;
 
-        GameManager.Instance.ResetLevel(3f);
+        GameManager.Instance.ResetStage(3f);
     }
 
 }

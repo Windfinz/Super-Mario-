@@ -19,6 +19,7 @@ public class Animation : MonoBehaviour
     private void OnDisable()
     {
         sp.enabled = false;
+        run.enabled = false;
     }
 
     private void Awake()
