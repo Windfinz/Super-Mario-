@@ -252,6 +252,8 @@ GameObject:
   - component: {fileID: 2393143122637594053}
   - component: {fileID: 673672730144870378}
   - component: {fileID: 673672730144870376}
+  - component: {fileID: 9022750367317443968}
+  - component: {fileID: 1468390488387619114}
   m_Layer: 6
   m_Name: Mario
   m_TagString: Player
@@ -328,3 +330,31 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.4}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &9022750367317443968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673672730144870379}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a98a05b83ab5140811eb6199f39537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sp: {fileID: 673672729491110581}
+  deadSprite: {fileID: 21300000, guid: 98c3fbc8d54837642965a13abb3e23ce, type: 3}
+--- !u!114 &1468390488387619114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673672730144870379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be19f89235b3c5248ab226941927d886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallRenderer: {fileID: 2555811627576453134}
+  bigRenderer: {fileID: 2630686723748209359}
