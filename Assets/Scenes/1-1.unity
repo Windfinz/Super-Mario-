@@ -2152,8 +2152,9 @@ Transform:
   - {fileID: 1308269854}
   - {fileID: 2006195050}
   - {fileID: 173419488}
+  - {fileID: 780662298}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &452880335
 PrefabInstance:
@@ -3523,6 +3524,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3630503821074323138, guid: b68e9ee3c66098149a1a2f39acf3ee65, type: 3}
   m_PrefabInstance: {fileID: 774507720}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &780662297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 780662298}
+  m_Layer: 0
+  m_Name: Koopa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &780662298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780662297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1930975794}
+  m_Father: {fileID: 452519243}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &782982998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7112,6 +7145,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8886874392961404044, guid: 7eaeb7c2dc1023944853eeaaaf189f72, type: 3}
   m_PrefabInstance: {fileID: 1325995269}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1389559132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263313947605253544, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_Name
+      value: Koopa
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
 --- !u!1001 &1409902710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9772,6 +9862,11 @@ Transform:
   m_Father: {fileID: 452519243}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1930975794 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+  m_PrefabInstance: {fileID: 5282571852768994112}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1940198586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10807,3 +10902,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa4f2e7b76a3b674ea4bce246b8bb818, type: 3}
+--- !u!1001 &5282571852768994112
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 780662298}
+    m_Modifications:
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 107
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425806164048680734, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263313947605253544, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
+      propertyPath: m_Name
+      value: Koopa
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8999ad1ca447cc2469d46353ac6dde63, type: 3}
