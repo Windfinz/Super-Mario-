@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Animation : MonoBehaviour
 {
-    private SpriteRenderer sp;
+    public SpriteRenderer sp {  get; private set; }
     private PlayerMovement movement;
 
     public Sprite idle;
