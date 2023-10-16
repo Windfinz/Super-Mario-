@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
     public bool starPower { get; private set; }
 
+
     private void Awake()
     {
         deathAnim = GetComponent<DeathAnim>();
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
 
     private void Death()
     {
+        deadSound.Play();
         smallRenderer.enabled = false;
         bigRenderer.enabled = false;
         deathAnim.enabled = true;
@@ -67,7 +69,7 @@ public class Player : MonoBehaviour
         activeRenderer = smallRenderer;
 
         capsuleCollider.size = new Vector2(1f, 1f);
-        capsuleCollider.offset = new Vector2(0f, 0.4f);
+        capsuleCollider.offset = new Vector2(0f, 0f);
 
         StartCoroutine(ScaleAnimation());
     }
