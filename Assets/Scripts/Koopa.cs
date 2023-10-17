@@ -8,6 +8,7 @@ public class Koopa : MonoBehaviour
     private bool shelled;
     private bool pushed;
 
+    public AudioSource stompSound;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!shelled && collision.gameObject.CompareTag("Player"))
@@ -60,6 +61,7 @@ public class Koopa : MonoBehaviour
 
     private void EnterShell()
     {
+        stompSound.Play();
         shelled = true;
         GetComponent<EntityMovement>().enabled = false;
         GetComponent<AnimationSprites>().enabled = false;
@@ -82,6 +84,7 @@ public class Koopa : MonoBehaviour
 
     private void Hit()
     {
+        stompSound.Play();
         GetComponent<AnimationSprites>().enabled = false;
         GetComponent<DeathAnim>().enabled = true;
         Destroy(gameObject, 3f);

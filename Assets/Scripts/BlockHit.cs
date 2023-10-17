@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BlockHit : MonoBehaviour
 {
+    
+
     public int maxHits = -1;
     public GameObject items;
     public Sprite emtyBlock;
@@ -23,6 +25,7 @@ public class BlockHit : MonoBehaviour
 
     private void Hit()
     {
+        
         SpriteRenderer sp = GetComponent<SpriteRenderer>();
         sp.enabled = true;
         maxHits--;

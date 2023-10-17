@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public AudioSource powerUpSound;
+    public AudioSource deadSound;
+
     public Animation smallRenderer;
     public Animation bigRenderer;
     private Animation activeRenderer;
@@ -23,6 +26,7 @@ public class Player : MonoBehaviour
         deathAnim = GetComponent<DeathAnim>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         activeRenderer = smallRenderer;
+        
     }
     public void Hit()
     {
@@ -51,7 +55,8 @@ public class Player : MonoBehaviour
     }
 
     public void Grow()
-    {
+    {   
+        powerUpSound.Play();
         smallRenderer.enabled = false;
         bigRenderer.enabled = true;
         activeRenderer = bigRenderer;

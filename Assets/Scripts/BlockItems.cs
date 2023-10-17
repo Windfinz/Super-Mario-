@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BlockItems : MonoBehaviour
 {
+    public AudioSource itemAppearSound;
+
     private void Start()
     {
         StartCoroutine(Animate());
@@ -11,6 +13,8 @@ public class BlockItems : MonoBehaviour
 
     private IEnumerator Animate()
     {
+        itemAppearSound.Play();
+
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         CircleCollider2D physicsCollider = rb.GetComponent<CircleCollider2D>();
         BoxCollider2D triggerCollider = rb.GetComponent<BoxCollider2D>();

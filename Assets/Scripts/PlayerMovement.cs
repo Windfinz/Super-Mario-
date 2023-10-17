@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     private Camera cam;
     private new Collider2D collider;
 
+    public AudioSource smallJumpSound;
+    public AudioSource bigJumpSound;
+
     private Vector2 velocity;
     private float inputAxis;
 
@@ -22,12 +25,13 @@ public class PlayerMovement : MonoBehaviour
     public bool sliding => (inputAxis > 0f && velocity.x < 0f) || (inputAxis < 0f && velocity.x > 0f);
     public bool running => Mathf.Abs(velocity.x) > 0.25f || Mathf.Abs(inputAxis) > 0.25f;
 
-
+    Player player;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         cam = Camera.main;
+        player = GetComponent<Player>();
     }
 
     private void OnEnable()
@@ -95,8 +99,15 @@ public class PlayerMovement : MonoBehaviour
         velocity.y = Mathf.Max(velocity.y, 0f);
         jumping = velocity.y > 0f;
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && player.big)
         {
+            bigJumpSound.Play();
+            velocity.y = jumpForce;
+            jumping = true;
+        }
+        else if(Input.GetButtonDown("Jump") && player.small)
+        {
+            smallJumpSound.Play();
             velocity.y = jumpForce;
             jumping = true;
         }

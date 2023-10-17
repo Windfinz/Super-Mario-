@@ -10,7 +10,7 @@ public class FlagPole : MonoBehaviour
     public float speed = 6f;
     public int nextWorld = 1;
     public int nextStage = 1;
-
+    public AudioSource flagPoleSound;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,6 +24,8 @@ public class FlagPole : MonoBehaviour
 
     private IEnumerator LevelCompleteSequence(Transform player)
     {
+        flagPoleSound.Play();
+
         player.GetComponent<PlayerMovement>().enabled = false;
         yield return MoveTo(player, poleBottom.position);
         yield return MoveTo(player, player.position + Vector3.right);

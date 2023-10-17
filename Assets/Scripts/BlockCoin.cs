@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BlockCoin : MonoBehaviour
 {
-    
+    public AudioSource coinSound;
 
     private void Start()
     {
-        
+        coinSound.Play();
         GameManager.Instance.AddCoin();
         StartCoroutine(Animate());
 

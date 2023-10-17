@@ -9,6 +9,8 @@ public class Pipe : MonoBehaviour
     public Vector3 enterDir = Vector3.down;
     public Vector3 exitDir = Vector3.zero;
 
+    public AudioSource enterPipeSound;
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (connection != null && other.CompareTag("Player"))
@@ -22,6 +24,8 @@ public class Pipe : MonoBehaviour
 
     private IEnumerator Enter(Transform player)
     {
+        enterPipeSound.Play();
+
         player.GetComponent<PlayerMovement>().enabled = false;
 
         Vector3 enteredPos = transform.position + enterDir;
@@ -30,9 +34,12 @@ public class Pipe : MonoBehaviour
         yield return Move(player, enteredPos, enteredScale);
         yield return new WaitForSeconds(1f);
 
+        enterPipeSound.Play();
+
         bool underground = connection.position.y < 0f;
         Camera.main.GetComponent<SideScrolling>().SetUnderGround(underground);
 
+        
 
         if(exitDir != Vector3.zero)
         {

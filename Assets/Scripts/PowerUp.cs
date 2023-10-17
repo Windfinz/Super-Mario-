@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
+
+    
     public enum Type
     {
         Coin,
@@ -13,6 +15,8 @@ public class PowerUp : MonoBehaviour
     }
 
     public Type type;
+
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,12 +34,12 @@ public class PowerUp : MonoBehaviour
                 GameManager.Instance.AddCoin();
                 break;
             case Type.ExtraLife:
-                GameManager.Instance.AddLife();
+;                GameManager.Instance.AddLife();
                 break; 
             case Type.MagicMushroom:
                 player.GetComponent<Player>().Grow();
                 break;
-            case Type.StarPower: 
+            case Type.StarPower:
                 player.GetComponent<Player>().StarPower();
                 break;
 
